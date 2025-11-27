@@ -1,0 +1,208 @@
+/* SECTION STYLE */
+.contact-section {
+    position: relative;
+    padding: 100px 20px;
+    background: #0a0015;
+    color: white;
+    overflow: hidden;
+}
+
+/* PARTICLES */
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* HEADING */
+.connect-heading {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 60px;
+}
+
+.connect-sub {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #c4a2ff;
+    opacity: 0.9;
+}
+
+.connect-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 5px;
+    background: linear-gradient(90deg, #b26ffb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CONTAINER */
+.contact-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* LEFT SIDE */
+.contact-left {
+    flex: 0.9;
+}
+
+.contact-left p {
+    font-size: 18px;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #d6caff;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.icon {
+    font-size: 30px;
+    color: #b26ffb;
+    transition: 0.3s;
+}
+
+.linkedin:hover {
+    color: #0A66C2;
+    transform: scale(1.2);
+}
+
+.github:hover {
+    color: #bbb;
+    transform: scale(1.2);
+}
+
+/* RESUME CARD */
+.resume-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    width: 350px;
+    /* FIXED WIDTH */
+    text-align: center;
+    backdrop-filter: blur(6px);
+}
+
+.resume-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.view-btn,
+.download-btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.view-btn {
+    background: #7c3aed;
+}
+
+.download-btn {
+    background: #4f46e5;
+}
+
+.view-btn:hover,
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(164, 69, 255, 0.8);
+}
+
+/* RIGHT SIDE FORM */
+.contact-right {
+    flex: 1.1;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* SEND BUTTON */
+.send-btn {
+    padding: 14px;
+    background: linear-gradient(135deg, #9333ea, #4f46e5);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px #a855f7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .resume-card {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .connect-title {
+        font-size: 34px;
+    }
+
+    .resume-card {
+        width: 90%;
+    }
+}

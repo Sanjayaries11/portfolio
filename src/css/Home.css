@@ -1,0 +1,163 @@
+/* ===== FULLSCREEN HERO ===== */
+.home-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 20px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+
+  /* ★ SAME as screenshot (gradient + dark navy) */
+  background: radial-gradient(circle at top, rgba(120, 0, 255, 0.15), transparent 70%),
+    radial-gradient(circle at bottom, rgba(0, 180, 255, 0.12), transparent 70%),
+    #0a0f1f;
+}
+
+/* ===== GRID BACKGROUND OVERLAY (Exact like screenshot) ===== */
+/* ===== GRID BACKGROUND OVERLAY (More Punchy) ===== */
+.home-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  /* GRID LINES: increase opacity and thickness */
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.12) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 2px, transparent 2px);
+
+  opacity: 0.7;
+  /* increase visibility */
+  pointer-events: none;
+}
+
+/* ADD SMALL DOTS AT GRID INTERSECTIONS */
+.home-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  /* dots every 40px on grid intersections */
+  background-image:
+    radial-gradient(circle, #e62753 2px, transparent 2.5px);
+  background-size: 40px 40px;
+  opacity: 0.6;
+}
+
+/* OPTIONAL: Animate the dots slightly for subtle twinkle */
+@keyframes dotTwinkle {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.home-section::after {
+  animation: dotTwinkle 4s ease-in-out infinite;
+}
+
+
+/* ===== CONTENT WRAPPER ===== */
+.home-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+/* ===== TEXT STYLES ===== */
+.home-greeting {
+  font-size: 22px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.home-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.typing-highlight {
+  color: #e62753;
+}
+
+.home-description {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+.accent {
+  color: #e62753;
+  font-weight: 600;
+}
+
+/* ===== CTA BUTTONS ===== */
+.home-cta {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.home-cta button {
+  padding: 10px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #e62753;
+  background: transparent;
+  color: #e62753;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 6px;
+}
+
+.home-cta button:hover {
+  background: #e62753;
+  color: white;
+}
+
+/* ===== SCROLL INDICATOR ===== */
+.scroll-indicator {
+  margin-top: 40px;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+  color: #e62753;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 36px;
+  }
+
+  .home-description {
+    font-size: 18px;
+  }
+}

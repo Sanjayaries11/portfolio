@@ -1,0 +1,96 @@
+/* === Navbar Styling === */
+.navbar {
+    display: flex;
+    align-items: center;
+    /* vertically center items */
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: #0d0d0d;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+    /* fix consistent height */
+}
+
+/* Brand styling */
+.nav-brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+    /* remove extra line height */
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+/* Desktop Menu */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    /* reset margin */
+    padding: 0;
+    /* reset padding */
+    align-items: center;
+    margin-right: 20px;
+    /* vertically center nav items */
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    /* vertically center text */
+    height: 100%;
+    /* fill parent's height */
+}
+
+/* Hover effect */
+.nav-item a:hover {
+    color: #e62753;
+}
+
+/* Mobile Toggle Icon */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+    align-self: center;
+    /* vertically center toggle */
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 992px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        /* same height as navbar */
+        right: 0;
+        width: 100%;
+        background: #0d0d0d;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        gap: 10px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 12px 0;
+    }
+}
